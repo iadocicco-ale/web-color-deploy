@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: webcolor
-        image: iadocicco/web-color:green
+        image: iadocicco/web-color:blue
         ports:
         - containerPort: 80
 ---
