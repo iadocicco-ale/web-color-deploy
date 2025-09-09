@@ -10,6 +10,7 @@ spec:
     metadata:
       labels:
         app: webcolor
+        env: prod
       annotations:
         prometheus.io/scrape: 'true'
         prometheus.io/path: '/metrics'
