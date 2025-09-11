@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: webcolor
-        image: iadocicco/web-color:blue
+        image: iadocicco/web-color:green
         ports:
           - containerPort: 80
   minReadySeconds: 20
