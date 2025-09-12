@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: webcolor
-        image: iadocicco/web-color:green
+        image: fabricioveronez/web-color:green
         ports:
           - containerPort: 80
   strategy:
