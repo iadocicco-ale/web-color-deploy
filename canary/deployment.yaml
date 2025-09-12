@@ -34,12 +34,3 @@ spec:
         image: iadocicco/web-color:green
         ports:
           - containerPort: 80
-  minReadySeconds: 20
-  strategy:
-    canary:
-      steps:
-        - setWeight: 25
-        - pause: {}
-        - setWeight: 50
-        - pause: {}
-        - setWeight: 100
