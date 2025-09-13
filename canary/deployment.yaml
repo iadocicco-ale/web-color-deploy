@@ -32,6 +32,7 @@ spec:
       containers:
       - name: webcolor
         image: fabricioveronez/web-color:green
+        imagePullPolicy: Always
         ports:
           - containerPort: 80
   strategy:
@@ -41,4 +42,5 @@ spec:
       - pause: {}
       - setWeight: 50
       - pause: {}
+
       - setWeight: 100
