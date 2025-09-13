@@ -6,9 +6,10 @@ spec:
   selector:
     app: webcolor
   ports:
-  - port: 80
-    targetPort: 80
-    nodePort: 31900
+    - name: http
+      port: 8080
+      targetPort: 8080
+      nodePort: 31900
   type: NodePort
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -44,3 +45,4 @@ spec:
       - pause: {}
 
       - setWeight: 100
+
