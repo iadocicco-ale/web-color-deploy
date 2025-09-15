@@ -43,10 +43,10 @@ spec:
     metadata:
       labels:
         app: webcolor
-      annotations:
-        prometheus.io/scrape: 'true'
-        prometheus.io/path: '/metrics'
-        prometheus.io/port: '80'
+#     annotations: -- Nao precisa de annotations pq o Prometheus é Operator, sendo assim, via Service Monitor
+#        prometheus.io/scrape: 'true'
+#        prometheus.io/path: '/metrics'
+#        prometheus.io/port: '80'
     spec:
       containers:
       - name: webcolor
@@ -63,6 +63,7 @@ spec:
       - pause: {}
 
       - setWeight: 100
+
 
 
 
