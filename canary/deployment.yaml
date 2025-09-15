@@ -50,7 +50,7 @@ spec:
     spec:
       containers:
       - name: webcolor
-        image: fabricioveronez/web-color:green
+        image: fabricioveronez/web-color:blue
         imagePullPolicy: Always
         ports:
           - containerPort: 80
