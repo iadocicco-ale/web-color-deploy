@@ -14,6 +14,22 @@ spec:
       nodePort: 31900
   type: NodePort
 ---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: webcolor
+  namespace: webcolor-canary
+  labels:
+    release: prometheus-grafana   # 👈 importante, igual ao do conversao
+spec:
+  selector:
+    matchLabels:
+      app: webcolor               # 👈 tem que bater com o label do Service
+  endpoints:
+    - port: http                  # 👈 tem que bater com o "name:" da porta no Service
+      path: /metrics
+      interval: 15s
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
@@ -47,6 +63,7 @@ spec:
       - pause: {}
 
       - setWeight: 100
+
 
 
 
