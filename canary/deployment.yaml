@@ -14,18 +14,19 @@ spec:
       nodePort: 31900
   type: NodePort
 ---
+### Necessario incluir Service Monitor para poder monitorar via Prometheus ###
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: webcolor
   labels:
-    release: prometheus-grafana   # 👈 importante, igual ao do conversao
+    release: prometheus-grafana   # importante, igual ao do conversao
 spec:
   selector:
     matchLabels:
-      app: webcolor               # 👈 tem que bater com o label do Service
+      app: webcolor               # tem que bater com o label do Service
   endpoints:
-    - port: http                  # 👈 tem que bater com o "name:" da porta no Service
+    - port: http                  # tem que bater com o "name:" da porta no Service
       path: /metrics
       interval: 15s
 ---
@@ -62,6 +63,7 @@ spec:
       - pause: {}
 
       - setWeight: 100
+
 
 
 
