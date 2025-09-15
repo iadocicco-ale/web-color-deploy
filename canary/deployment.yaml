@@ -60,8 +60,13 @@ spec:
       - setWeight: 25
       - pause: {}
       - setWeight: 50
-      - pause: {}
-
+      - analysis:
+          templates:
+          - templateName: webcolor-success
+      - setWeight: 75
+      - analysis:
+          templates:
+          - templateName: webcolor-success
       - setWeight: 100
 
 
