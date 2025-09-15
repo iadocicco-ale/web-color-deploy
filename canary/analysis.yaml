@@ -11,7 +11,7 @@ spec:
       failureCondition: result < 0.8
       provider:
         prometheus:
-          address: http://prometheus-grafana.monitoring.svc.cluster.local
+          address: http://prometheus-grafana-kube-pr-prometheus.monitoring.svc.cluster.local:9090
           query: |
             scalar(
               sum(rate(flask_http_request_total{service="webcolor",status=~"2.."}[2m]))
