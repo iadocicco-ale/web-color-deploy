@@ -50,7 +50,7 @@ spec:
     spec:
       containers:
       - name: webcolor
-        image: iadocicco/web-color:green
+        image: iadocicco/web-color:blue
         imagePullPolicy: Always
         ports:
           - containerPort: 80
@@ -68,6 +68,7 @@ spec:
           templates:
           - templateName: webcolor-success
       - setWeight: 100
+
 
 
 
